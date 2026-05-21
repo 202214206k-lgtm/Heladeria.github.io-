@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacer Pedido – Frosty Scoops</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+
+  <div class="nav-brand">
+    <img src="helado2.png" alt="Logo Frosty Scoops" class="logo-img">
+    <span class="logo-text">Frozen & Co.</span>
+  </div>
+
+  <!-- BOTÓN HAMBURGUESA -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="Sabores.html">Sabores</a></li>
+    <li><a href="Nosotros.html">Nosotros</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="Pedido.html" class="nav-cta">Pedir ahora</a></li>
+  </ul>
+
+</nav>
+
+  <!-- HERO PEQUEÑO -->
+  <section class="hero hero-nosotros">
+    <div class="hero-bg-glow"></div><br><br>
+    <div class="hero-badge">✦ Pedido en línea</div>
+    <h1>¿Qué helado<br>te <em>apetece hoy?</em></h1>
+    <p>Completa el formulario y recíbelo en tu puerta.</p>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="pedido-section">
+    <div class="pedido-card">
+
+      <div class="form-grupo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej. María García">
+      </div>
+
+      <div class="form-grupo">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" placeholder="Ej. 984 123 456">
+      </div>
+
+      <div class="form-grupo">
+        <label for="direccion">Dirección de entrega</label>
+        <input type="text" id="direccion" placeholder="Calle, número, referencia">
+      </div>
+
+      <div class="form-grupo">
+        <label>Elige tu sabor</label>
+        <div class="sabores-selector" id="sabores-selector">
+          <!-- Los chips los genera main.js -->
+        </div>
+        <p class="sabor-elegido-label" id="sabor-elegido-label">Ningún sabor seleccionado</p>
+      </div>
+
+      <div class="form-grupo">
+        <label for="cantidad">Cantidad de bolas</label>
+        <div class="cantidad-control">
+          <button type="button" id="btn-menos">−</button>
+          <span id="cantidad-valor">1</span>
+          <button type="button" id="btn-mas">+</button>
+        </div>
+      </div>
+
+      <div class="form-grupo">
+        <label for="notas">Notas adicionales</label>
+        <textarea id="notas" rows="3" placeholder="Alergias, preferencias, dedicatoria..."></textarea>
+      </div>
+
+      <button type="button" class="btn-enviar" id="btn-enviar">
+        Confirmar pedido 🍦
+      </button>
+
+      <!-- El mensaje de confirmación lo inyecta main.js -->
+      <div id="confirmacion"></div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="brand">🍦 Frosty Scoops</div>
+    <div class="copy"></div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
